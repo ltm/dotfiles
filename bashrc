@@ -12,7 +12,9 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM=auto
-PROMPT_COMMAND='__git_ps1 "\[\e[32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]" "\$ "'
+PROMPT_COMMAND='__git_ps1 "${VIRTUAL_ENV+($(basename ${VIRTUAL_ENV})) }\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]" "\$ "'
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
 . /usr/local/etc/bash_completion
 . /usr/local/bin/virtualenvwrapper.sh
