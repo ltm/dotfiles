@@ -30,6 +30,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=
 export HISTSIZE=
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+export LESS_ADVANCED_PREPROCESSOR=1
 
 _fzf_compgen_path() {
   ag -g "" "$1"
