@@ -1,0 +1,10 @@
+#!/bin/sh
+set -o errexit
+set -o nounset
+
+for FILE in *; do
+    DOTFILE="../.${FILE}"
+    [ "${FILE}" = "script" ] && continue
+    [ -d "${DOTFILE}" ] && rm -r "${DOTFILE}"
+    ln -sf ".dotfiles/${FILE}" "${DOTFILE}"
+done
