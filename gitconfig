@@ -11,12 +11,23 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [pull]
 	rebase = preserve
 [branch]
 	autosetuprebase = always
 [commit]
 	gpgsign = true
+[github]
+	user = ltm
+[credential]
+	helper = osxkeychain
+[blame]
+	coloring = highlightRecent
+[versionsort]
+	suffix = -alpha
+	suffix = -beta
+	suffix = -rc
