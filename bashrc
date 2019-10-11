@@ -23,6 +23,7 @@ gpgconf --launch gpg-agent
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind '?:toggle-preview' --exact"
 export FZF_CTRL_T_COMMAND='ag -g ""'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -n 100'"
