@@ -33,6 +33,7 @@ export HISTFILESIZE=
 export HISTSIZE=
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
 export LESS_ADVANCED_PREPROCESSOR=1
+export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 _fzf_compgen_path() {
   ag -g "" "$1"
