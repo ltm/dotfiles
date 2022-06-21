@@ -9,6 +9,8 @@ for FILE in *; do
     ln -sf ".dotfiles/${FILE}" "${DOTFILE}"
 done
 
+chsh -s /bin/bash
+
 chmod 600 aws/credentials
 chmod 700 gnupg
 
