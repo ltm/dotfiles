@@ -1,2 +1,5 @@
 [default]
 region = us-east-1
+s3 = 
+	multipart_threshold = 4096MB
+	multipart_chunksize = 16MB
